@@ -136,10 +136,10 @@ Este projeto contou com o apoio de **Inteligência Artificial** como assistente 
 * Geração base de componentes e serviços seguindo os padrões exigidos em aula.
 * Revisão de consistência entre código e documentação.
 
-*Todo o código gerado foi rigorosamente auditado, testado e ajustado pelo grupo. Esse repositorio é o secundario feito para a entrega*.
+*Todo o código gerado foi rigorosamente testado e ajustado pelo grupo. Esse repositorio é o secundario feito para a entrega*.
 
 ---
 
 <div align="center">
-Feito com 💜 pelo grupo Próximo Ep.
+Feito pelo grupo Próximo Ep.
 </div>
