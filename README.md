@@ -22,6 +22,7 @@ Quem assiste a várias séries e filmes simultaneamente enfrenta um desafio comu
 ## 🚀 A Solução
 
 O **Próximo Ep.** resolve isso reunindo o melhor dos mundos em uma Single Page Application (SPA) leve e fluida:
+
 * 🌐 **Descoberta em tempo real**: listagem de tendências semanais direto da API oficial do **TMDB**.
 * 📋 **Organização inteligente**: controle pessoal de status (`Quero assistir`, `Assistindo`, `Assistido`) persistido localmente via `localStorage`.
 * 😄 **Reações rápidas**: expresse sua opinião pós-maratona com emojis (estilo Reddit/TV Time), ativados inteligentemente assim que você conclui um título.
@@ -55,10 +56,10 @@ O **Próximo Ep.** resolve isso reunindo o melhor dos mundos em uma Single Page 
 
 ## 🛠️ Tecnologias & Ferramentas
 
-* **[React](https://react.dev/)** (Componentes funcionais, Hooks `useState` e `useEffect`).
-* **[React Router](https://reactrouter.com/)** — Gerenciamento de rotas dinâmicas e layouts com aninhamento (`Outlet`).
+* **[React](https://react.dev/)** — Componentes funcionais, Hooks (`useState` e `useEffect`).
+* **[React Router](https://reactrouter.com/)** — Gerenciamento de rotas dinâmicas (incluindo rota de detalhes por tipo/id) com um layout compartilhado (`Layout.jsx`) entre todas as páginas.
 * **[Vite](https://vitejs.dev/)** — Empacotador e ambiente de desenvolvimento ultrarrápido.
-* **[lucide-react](https://lucide.dev/)** — Ícones modernos e limpos.
+* **[react-icons](https://react-icons.github.io/react-icons/)** — Ícones utilizados em toda a interface (Navbar, cartões, reações e estados vazios).
 * **CSS Puro** — Design tokens customizados em `src/index.css` focados em uma experiência visual imersiva e escura (estilo *Letterboxd*).
 * **[TMDB API](https://developer.themoviedb.org/)** — Fonte de dados cinematográficos e seriados.
 
@@ -80,7 +81,7 @@ Siga os passos abaixo para rodar o ambiente de desenvolvimento na sua máquina:
 
 ### 📋 Pré-requisitos
 * Ter o **[Node.js](https://nodejs.org/)** (versão 18 ou superior) instalado.
-* Uma chave de API gratuita do **TMDB** (gere em [themoviedb.org/settings/api](https://www.themoviedb.org/settings/api)).
+* Uma chave de API gratuita do **TMDB** (gere em [themoviedb.org/settings/api](https://themoviedb.org/settings/api)).
 
 ### 🚀 Passo a Passo
 
@@ -90,17 +91,12 @@ Siga os passos abaixo para rodar o ambiente de desenvolvimento na sua máquina:
    cd proximo-tv-time
    ```
 
-2. **Instale as dependências do projeto:**
+2. **Instale as dependências do projeto** (já inclui `react-router-dom` e `react-icons`):
    ```bash
    npm install
    ```
 
-3. **Instale os pacotes de ícones complementares:**
-   ```bash
-   npm i react-icons
-   ```
-
-4. **Configure as variáveis de ambiente:**
+3. **Configure as variáveis de ambiente:**
    Copie o template de ambiente e insira sua chave do TMDB:
    ```bash
    cp template.env .env
@@ -110,12 +106,12 @@ Siga os passos abaixo para rodar o ambiente de desenvolvimento na sua máquina:
    VITE_TMDB_API_KEY=sua_chave_da_api_aqui
    ```
 
-5. **Inicie o servidor de desenvolvimento:**
+4. **Inicie o servidor de desenvolvimento:**
    ```bash
    npm run dev
    ```
 
-6. Acesse o endereço indicado no seu terminal (geralmente `http://localhost:5173`) e boa maratona! 🎉
+5. Acesse o endereço indicado no seu terminal (geralmente `http://localhost:5173`) e boa maratona! 🎉
 
 ---
 
@@ -136,10 +132,12 @@ Este projeto contou com o apoio de **Inteligência Artificial** como assistente 
 * Geração base de componentes e serviços seguindo os padrões exigidos em aula.
 * Revisão de consistência entre código e documentação.
 
-*Todo o código gerado foi rigorosamente testado e ajustado pelo grupo. Esse repositorio é o secundario feito para a entrega*.
+> *Todo o código gerado foi testado e ajustado pelo grupo.*
 
 ---
 
 <div align="center">
-Feito pelo grupo Próximo Ep.
+
+Feito pelo grupo **Próximo Ep.**
+
 </div>
