@@ -10,12 +10,20 @@ export const classeDoStatus = (status) => {
   return "";
 };
 
-// Cartão clicável de um título (filme ou série), usado na Home e na Minha Lista.
+// MovieCard.jsx
+// Cartão clicável que representa um filme ou série. É reutilizado tanto na
+// Home (resultados da API) quanto na Minha Lista (itens já salvos).
+//
+// Prop recebida:
+// - item: objeto com { id, tipo, titulo, poster, ano, status }
+
 const MovieCard = ({ item }) => {
   const { id, tipo, titulo, poster, ano, status } = item;
 
-  // Guarda qual título foi clicado, para a página de Detalhes saber
-  // qual título mostrar assim que o usuário chegar lá.
+// Executado quando o usuário clica no cartão, antes de navegar para
+// a página de Detalhes. Guarda no localStorage qual título (tipo + id)
+// foi selecionado, pois a página Detalhes.jsx não lê isso da URL —
+// ela pergunta essa informação ao localStorage /storage.js.
   const lidarComClique = () => {
     salvarTituloSelecionado(tipo, id);
   };
@@ -32,6 +40,9 @@ const MovieCard = ({ item }) => {
             {status}
           </span>
         )}
+        
+        {/* Só tenta renderizar a imagem se existir um caminho de pôster;
+            caso contrário, evita mostrar uma imagem quebrada. */}
 
         {poster ? (
           <img
@@ -45,6 +56,7 @@ const MovieCard = ({ item }) => {
       <div className="cartao-titulo__corpo">
         <p className="cartao-titulo__titulo">{titulo}</p>
         <p className="cartao-titulo__meta">
+          {/* Mostra "Série" ou "Filme" dependendo do tipo, e o ano (se houver). */}
           {tipo === "tv" ? "Série" : "Filme"} {ano ? `· ${ano}` : ""}
         </p>
       </div>

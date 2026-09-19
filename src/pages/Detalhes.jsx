@@ -42,6 +42,10 @@ const Detalhes = () => {
 
   const alterarStatus = (novoStatus) => {
     let duracao = 0;
+       // Calcula a duração total do título em minutos, de forma diferente
+    // para série (duração de um episódio × número de episódios) e
+    // filme (duração única do "runtime").
+    
     if (tipo === "tv") {
       duracao = (titulo.episode_run_time?.[0] || 0) * (titulo.number_of_episodes || 0);
     } else {
